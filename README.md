@@ -2,13 +2,13 @@
 
 This is _a fork of_ a Git Style Guide inspired by [*How to Get Your Change Into the Linux
 Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches),
-the [git man pages](http://git-scm.com/doc) and community-driven best
-practices.
+the [git man pages](http://git-scm.com/doc) and various good practices.
 
 This is a simple educational fork of the original version,
 which resides at [`agis/git-style-guide`](https://github.com/agis/git-style-guide).
 
-If you feel like contributing, go ahead, fork it and open a pull request.
+If you feel like contributing, please do so! Fork the project and open a pull
+request.
 
 # Table of contents
 
@@ -32,10 +32,10 @@ If you feel like contributing, go ahead, fork it and open a pull request.
 
 * Prefer *dashes* over underscores.
 
-* When several people are working *independently* on a big feature it might be
+* When several people are working independently on a feature, it might be
   convenient to have *personal* branches and a *team-wide* branch. In that case,
   suffix the name of the branch by a slash, followed by the person's name.
-  Use *master* for the team-wide branch:
+  Use *"master"* for the team-wide branch:
 
   ```shell
   feature-branch/master # team-wide branch
@@ -44,13 +44,13 @@ If you feel like contributing, go ahead, fork it and open a pull request.
   ```
 
   [Merge](#merging) at will the personal branches to the team-wide branch
-  *after* rebasing onto it, in order to maintain a simple history. Eventually,
+  *after* rebasing onto it (in order to maintain a simple history). Eventually,
   the team-wide branch will be merged to `master`.
 
 * Delete your branch from the upstream repository after it's merged (unless
   there is a specific reason not to).
 
-  Tip: Use the following command to see the merged branches:
+  Tip: Use the following command to list merged branches:
 
   ```shell
   $ git branch --merged master | grep -v "\* master"`
@@ -63,15 +63,14 @@ If you feel like contributing, go ahead, fork it and open a pull request.
   optimizes the performance of a feature, split it into two separate commits.
 
 * Don't split a single *logical change* into several commits. For example,
-  the implementation of a feature and the corresponding tests should be in a
-  single commit.
+  the implementation of a feature and the corresponding tests should be in the
+  same commit.
 
 * Commit *early* and *often*. Small, self-contained commits are easier to
-  understand and revert if something goes wrong.
+  understand and revert when something goes wrong.
 
 * Commits should be ordered *logically*. For example, if *commit X* depends
   on changes done in *commit Y*, then *commit Y* should come before *commit X*.
-
 
 ### Messages
 
@@ -85,11 +84,11 @@ If you feel like contributing, go ahead, fork it and open a pull request.
   $ git commit -m
   ```
 
-  Committing from the terminal encourages a mindset of having to write
-  everything in a single line which results in non-informative, ambiguous
-  commit messages.
+  Committing from the terminal encourages a mindset of having to fit everything
+  in a single line which usually results in non-informative, ambiguous commit
+  messages.
 
-* The commit summary line should be *descriptive* yet succinct*. It should be
+* The commit summary line should be *descriptive* yet *succinct*. It should be
   no longer than *50* characters. It should be capitalized and written in
   present tense. If it is a single sentence, do not put a period at the end:
 
@@ -133,16 +132,15 @@ If you feel like contributing, go ahead, fork it and open a pull request.
   Similarly, if *commit A* solves a bug introduced by *commit B*, it should
   be stated in the message of *commit A*.
 
-* If a commit is going to be squashed or fixed-up to another commit use the
-  `--squash` and `--fixup` flags respectively in order to make the intention
-  clear:
+* If a commit is going to be squashed to another commit use the `--squash` and
+  `--fixup` flags respectively, in order to make the intention clear:
 
   ```shell
   $ git commit --squash f387cab2
   ```
 
-  *(Tip: Then you can use the `--autosquash` flag when rebasing and the marked
-  commits will be squashed automatically.)*
+  *(Tip: Use the `--autosquash` flag when rebasing. The marked commits will be
+  squashed automatically.)*
 
 ## Merging
 
@@ -154,15 +152,13 @@ If you feel like contributing, go ahead, fork it and open a pull request.
 * However, there are cases where rewriting history is legitimate. These are
   when:
 
-  * You are the only one working on the branch and it is not at a review
-    phase
+  * You are the only one working on the branch and it is not being reviewed.
 
-  * You want to tidy up your branch (ie. squash/reorder commits, reword
-    messages) and/or rebase it onto the 'master' branch *just before you
-    merge it*.
+  * You want to tidy up your branch (eg. squash commits) and/or rebase it onto
+    the "master" in order to merge it later.
 
-  That said, *never rewrite the history of the `master` branch* or any other
-  "important" branches (ie. used by production or CI servers).
+  That said, *never rewrite the history of the "master" branch* or any other
+  special branches (ie. used by production or CI servers).
 
 * Keep the history *clean* and *simple*. *Just before you merge* your branch:
 
@@ -174,14 +170,15 @@ If you feel like contributing, go ahead, fork it and open a pull request.
        ```shell
        [my-branch] $ git fetch
        [my-branch] $ git rebase origin/master
+       # then merge
        ```
 
        This results in a branch that can be applied directly to the end of the
-       `master` branch and results in a very simple history.
+       "master" branch and results in a very simple history.
 
-       *(Note: This workflow is better suited for projects with short-running
-       branches. Otherwise it might be better to occassionally merge the branch
-       instead of rebasing onto it.)*
+       *(Note: This strategy is better suited for projects with short-running
+       branches. Otherwise it might be better to occassionally merge the
+       "master" branch instead of rebasing onto it.)*
 
 * If your branch includes more than one commit, do not merge with a
   fast-forward:
@@ -197,10 +194,10 @@ If you feel like contributing, go ahead, fork it and open a pull request.
 ## Misc.
 
 * There are various workflows and each one has its strengths and weaknesses.
-  Whether a workflow is good depends on the team, the project and the
-  development workflow.
+  Whether a workflow fits your case, depends on the team, the project and your
+  development procedures.
 
-  It is important though to actually *choose* a workflow and stick with it.
+  That said, it is important to actually *choose* a workflow and stick with it.
 
 * *Be consistent.* This is related to the workflow but also expands to things
   like commit messages, branch names and tags. Having a consistent style
