@@ -2,7 +2,8 @@
 
 This is _a fork of_ a Git Style Guide inspired by [*How to Get Your Change Into the Linux
 Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches),
-the [git man pages](http://git-scm.com/doc) and various good practices.
+the [git man pages](http://git-scm.com/doc) and various practices popular
+among the community.
 
 This is a simple educational fork of the original version,
 which resides at [`agis/git-style-guide`](https://github.com/agis/git-style-guide).
