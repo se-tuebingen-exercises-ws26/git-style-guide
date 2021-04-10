@@ -8,6 +8,10 @@ among the community.
 This is a simple educational fork of the original version,
 which resides at [`agis/git-style-guide`](https://github.com/agis/git-style-guide).
 
+Translations of the guide are available in the following languages:
+
+* [Chinese Simplified](https://github.com/aseaday/git-style-guide)
+
 If you feel like contributing, please do so! Fork the project and open a pull
 request.
 
