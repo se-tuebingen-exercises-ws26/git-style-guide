@@ -10,7 +10,8 @@ which resides at [`agis/git-style-guide`](https://github.com/agis/git-style-guid
 
 Translations of the guide are available in the following languages:
 
-* [Chinese Simplified](https://github.com/aseaday/git-style-guide)
+* [Chinese (Simplified)](https://github.com/aseaday/git-style-guide)
+* [Chinese (Traditional)](https://github.com/JuanitoFatas/git-style-guide)
 * [Portuguese](https://github.com/guylhermetabosa/git-style-guide)
 
 If you feel like contributing, please do so! Fork the project and open a pull
