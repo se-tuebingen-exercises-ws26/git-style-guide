@@ -9,7 +9,7 @@ This is a simple educational fork of the original version,
 which resides at [`agis/git-style-guide`](https://github.com/agis/git-style-guide).
 
 Translations are available in the following languages:
-dep
+
 * [Chinese (Simplified)](https://github.com/aseaday/git-style-guide)
 * [Chinese (Traditional)](https://github.com/JuanitoFatas/git-style-guide)
 * [French](https://github.com/pierreroth64/git-style-guide)
