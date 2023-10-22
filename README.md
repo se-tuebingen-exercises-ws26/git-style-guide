@@ -1,9 +1,12 @@
 # Git Style Guide
 
-This is a Git Style Guide inspired by [*How to Get Your Change Into the Linux
+This is _a fork of_ a Git Style Guide inspired by [*How to Get Your Change Into the Linux
 Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches),
 the [git man pages](http://git-scm.com/doc) and community-driven best
 practices.
+
+This is a simple educational fork of the original version,
+which resides at [`agis/git-style-guide`](https://github.com/agis/git-style-guide).
 
 If you feel like contributing, go ahead, fork it and open a pull request.
 
